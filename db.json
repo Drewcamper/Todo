@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": "fdce",
+      "title": "Complete Project Proposal",
+      "completed": true,
+      "date": "2024-08-22T07:29:39.399Z"
+    },
+    {
+      "id": "2ecd",
+      "title": "Organize Meeting with Team",
+      "completed": false,
+      "date": "2024-08-13T08:14:29.348Z"
+    },
+    {
+      "id": "638a",
+      "title": "Update Website Content",
+      "completed": false,
+      "date": "2024-08-13T07:59:06.487Z"
+    },
+    {
+      "id": "ee3d",
+      "title": "Prepare Annual Budget Report",
+      "completed": false,
+      "date": "2024-08-21T13:02:17.676Z"
+    }
+  ]
+}

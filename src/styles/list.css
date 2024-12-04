@@ -1,0 +1,125 @@
+:root {
+    --box-shadow: 0px 8px 24px rgb(57 85 120 / 8%);
+    --checkbox-area-bg: radial-gradient(
+        rgb(255 255 255),
+        rgb(55 198 250 / 38.8%),
+        rgb(255 255 255),
+        rgb(255 255 255),
+        rgb(255 255 255)
+    );
+    --checkbox-bg: rgb(0 174 239 / 5%);
+    --todo-info-time: rgb(136 136 136);
+    --todo-info-title: rgb(0 0 0);
+}
+
+.todo {
+    display: flex;
+    list-style-type: none;
+    background: rgb(255 255 255);
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.todo-checkbox-area {
+    margin-right: 10px;
+    border-radius: 100%;
+    display: flex;
+}
+
+.todo-checkbox-area:hover {
+    background: var(--checkbox-area-bg);
+}
+
+.todo-checkbox {
+    background: rgb(0 174 239 / 5%);
+    border: 1px solid var(--app-blue);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    margin: auto 28px;
+}
+
+.todo-checkbox:checked {
+    background: var(--app-blue);
+    border: 1.5px solid rgb(255 255 255);
+}
+
+.todo-checkbox:checked::after {
+    content: '\2713';
+    color: rgb(255 255 255);
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.todo-title {
+    color: var(--todo-info-title);
+    margin: 0 0 5px;
+    outline: none;
+}
+
+.editable {
+    padding: 4px;
+    margin: 0 16px 12px 8px;
+    border-bottom: 1px solid rgb(0 0 0);
+    color: rgb(0 0 0 / 80%);
+}
+
+.todo-date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: var(--todo-info-time);
+    margin: 0 0 5px;
+}
+
+.todo-edit {
+    display: flex;
+    margin: auto 15px;
+    background: url('../svgs/edit.svg') no-repeat center center;
+    padding: 15px;
+    background-color: transparent;
+}
+
+.todo-info:has(.todo-title.editable) ~ .todo-edit {
+    background: url('../svgs/save.svg') no-repeat center center;
+    background-color: transparent;
+}
+
+.todo-delete {
+    display: flex;
+    margin: auto 15px;
+    padding: 24px;
+    border-radius: 100%;
+    background: url('../svgs/delete.svg') no-repeat center center;
+    background-size: 16px 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.todo-delete:hover,
+.todo-delete:focus {
+    background-color: rgb(237 24 70 / 15%);
+}
+
+.todo-delete:active {
+    background-color: rgb(237 24 70 / 20%);
+}

@@ -1,0 +1,31 @@
+:root {
+  --status-bg: rgb(255 255 255);
+  --status-border-radius: 6px;
+  --status-font-size: 18px;
+  --status-font-weight: 600;
+  --status-padding: 20px 75px;
+  --status-color: rgb(28 27 27);
+  --status-hover-bg: var(--app-blue);
+  --status-hover-color: rgb(255 255 255);
+}
+
+.status {
+  min-width: 150px;
+  padding: var(--status-padding);
+  border: 1px solid var(--app-blue);
+  background: var(--status-bg);
+  font-weight: var(--status-font-weight);
+  font-size: var(--status-font-size);
+  line-height: var(--status-font-size);
+  letter-spacing: 0.02em;
+  color: var(--status-color);
+  text-transform: capitalize;
+  border-radius: var(--status-border-radius);
+}
+
+.status:active,
+.status:focus,
+.status:hover {
+  background: var(--status-hover-bg);
+  color: var(--status-hover-color);
+}

@@ -1,0 +1,16 @@
+.welcome {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-content {
+  width: 50%;
+}
+
+.welcome-title {
+  letter-spacing: 0.02em;
+}
+
+.welcome-note-img {
+  margin: auto;
+}

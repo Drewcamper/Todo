@@ -1,0 +1,47 @@
+.popup-container {
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgb(204 204 204);
+    background-color: rgb(255 255 255);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    max-width: 50%;
+    border-radius: 12px;
+}
+
+.confirm-btn {
+    margin: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid rgb(187 187 187);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn {
+    background-color: rgb(255 255 255);
+}
+
+.delete-btn {
+    background-color: rgb(231 69 69);
+}
+
+.cancel-btn:hover {
+    background-color: rgb(200 200 200);
+}
+
+.delete-btn:hover {
+    background-color: rgb(250 69 69);
+}

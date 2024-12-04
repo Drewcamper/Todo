@@ -1,0 +1,50 @@
+:root {
+    --del-btn-bg: rgb(237 24 71);
+    --del-btn-bg-hover: rgb(255 48 93);
+    --input-color: rgb(18 18 18);
+    --input-border: rgb(219 227 241);
+    --box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    --disabled-bg-color: rgb(204 204 204);
+    --disabled-color: rgb(102 102 102);
+}
+
+.add-note {
+    position: relative;
+}
+
+.add-note-input {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--input-border);
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--input-color);
+    padding: 30px 180px 30px 30px;
+}
+
+.add-note-submit {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    box-shadow: var(--box-shadow);
+    padding: 18px 32px;
+    background: var(--del-btn-bg);
+    border-radius: 14px;
+    text-transform: uppercase;
+    color: rgb(255 255 255);
+    border: none;
+}
+
+.add-note-submit:hover {
+    background-color: var(--del-btn-bg-hover);
+}
+
+.add-note-submit:disabled {
+    box-shadow: none;
+    background-color: var(--disabled-bg-color);
+    color: var(--disabled-color);
+}

@@ -1,0 +1,49 @@
+{
+    "name": "todo_app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint",
+        "format": "prettier --write .",
+        "prepare": "husky install",
+        "lint:css": "stylelint \"**/*.{css,scss}\" --fix",
+        "server": "npx json-server --watch db.json",
+        "start": "concurrently \"npm run dev\" \"npm run server\""
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "prettier --write --ignore-unknown"
+        ],
+        "*.{json,html}": [
+            "prettier --write --ignore-unknown"
+        ],
+        "**/*.{css,scss}": [
+            "stylelint --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.8.0",
+        "eslint": "^9.8.0",
+        "globals": "^15.9.0",
+        "husky": "^9.1.4",
+        "lint-staged": "^15.2.9",
+        "prettier": "^3.3.3",
+        "stylelint": "^16.8.1",
+        "stylelint-config-standard": "^36.0.1",
+        "vite": "^5.4.0"
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2",
+        "json-server": "^1.0.0-beta.1"
+    }
+}

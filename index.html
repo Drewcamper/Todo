@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="./src/styles/todo.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./src/styles/welcome.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./src/styles/add_note.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./src/styles/status_buttons.css"
+        />
+        <link rel="stylesheet" type="text/css" href="./src/styles/list.css" />
+        <link rel="stylesheet" type="text/css" href="./src/styles/common.css" />
+        <title>Todo App</title>
+    </head>
+    <body>
+        <header>
+            <img
+                alt="todo logo"
+                src="./src/svgs/todo.svg"
+                class="header-logo"
+            />
+        </header>
+        <main>
+            <div class="welcome">
+                <div class="welcome-content">
+                    <h1 class="title welcome-title">todo list</h1>
+                    <p class="text">
+                        Start using your To-Do List today and take control of
+                        your tasks like never before! Whether for personal use,
+                        school, or work, our To-Do List is here to help you
+                        achieve more and stress less.
+                    </p>
+                </div>
+                <img
+                    alt="note logo"
+                    class="welcome-note-img"
+                    src="./src/svgs/note.svg"
+                />
+            </div>
+            <div class="status-buttons-container"></div>
+            <ul id="todo-list"></ul>
+        </main>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
